@@ -211,12 +211,13 @@
 
         </nav>
 
-     <div class="hero" style="
-    background: linear-gradient(rgba(128, 0, 0, 0.5), rgba(128, 0, 0, 0.5)), url('web1.png');
+    <div class="hero" style="
+    /* Removed 'images/' because your files are in the root directory */
+    background: linear-gradient(rgba(128, 0, 0, 0.6), rgba(128, 0, 0, 0.6)), url('web1.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 40px 20px;
+    padding: 60px 20px; /* Increased padding to match Canva spacing */
     text-align: center;
     width: 100%;
     box-sizing: border-box;
@@ -224,14 +225,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 250px;
 ">
     
     <img src="logo.png" alt="MNHS Logo" style="width: 100px; margin-bottom: 15px;">
     
-    <h1 style="color: white; font-size: 18px;">MARINDUQUE NATIONAL HIGH SCHOOL</h1>
-    <p style="color: rgb(250, 208, 0); font-size: 12px;">ONE HEART, ONE TEAM, ONE MNHS</p>
+    <h1 style="color: white; font-family: var(--font-copperplate); font-size: 1.2em; margin: 5px 0; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+        MARINDUQUE NATIONAL HIGH SCHOOL
+    </h1>
+    <p style="color: #ffd700; font-family: var(--font-copperplate); font-size: 0.7em; font-weight: bold; margin: 0; letter-spacing: 1.5px;">
+        ONE HEART, ONE TEAM, ONE MNHS
+    </p>
     
-    <a href="#" style="background: rgb(255, 255, 255); color: black; padding: 10px 20px; border-radius: 20px; text-decoration: none; margin-top: 15px;">
+    <a href="report.html" style="background: white; color: black; padding: 12px 25px; border-radius: 25px; text-decoration: none; margin-top: 20px; font-weight: bold; font-size: 0.85em; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
         You're one click away →
     </a>
 

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNHS Home Base</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --mnhs-maroon: #800000;
+            --mnhs-gold: #b38d45;
+            --cream-bg: #FDF9F0;
+            --white: #ffffff;
+            /* Font fallbacks */
+            --font-copperplate: "Copperplate", "Copperplate Gothic Light", serif;
+            --font-canva: 'Inter', sans-serif;
+            --font-arimo: 'Arimo', sans-serif;
+        }
+
+        body {
+            background-color: #ccc;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-family: var(--font-arimo);
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: var(--cream-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        /* Top Nav Bar */
+        .top-nav {
+            background-color: var(--mnhs-maroon);
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .school-logo-small { width: 35px; height: 35px; }
+
+        .search-bar {
+            flex-grow: 1;
+            background: white;
+            border-radius: 20px;
+            padding: 5px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        .nav-icons { color: white; display: flex; gap: 10px; font-size: 1.2em; }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(128,0,0,0.8), rgba(128,0,0,0.8)), url('https://via.placeholder.com/400x200'); /* Replace with your school building image */
+            background-size: cover;
+            padding: 40px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero img { width: 80px; margin-bottom: 10px; }
+
+        .hero h2 {
+            font-family: var(--font-copperplate);
+            font-size: 0.9em;
+            margin: 5px 0;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-family: var(--font-copperplate);
+            font-size: 0.65em;
+            color: #ffd700;
+            margin: 0;
+        }
+
+        .cta-bubble {
+            display: inline-block;
+            background: white;
+            color: black;
+            padding: 8px 20px;
+            border-radius: 25px;
+            margin-top: 15px;
+            font-size: 0.8em;
+            font-family: var(--font-canva);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Action Section */
+        .actions { padding: 20px; text-align: center; }
+
+        .section-title {
+            font-family: var(--font-arimo);
+            font-weight: bold;
+            font-size: 0.95em;
+            margin-bottom: 20px;
+        }
+
+        .main-btn {
+            background: linear-gradient(to right, #600, #a00);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            text-decoration: none;
+            font-family: var(--font-copperplate);
+            font-size: 0.9em;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .icon-item { text-align: center; text-decoration: none; color: black; }
+
+        .icon-box {
+            background: var(--mnhs-maroon);
+            color: white;
+            width: 100%;
+            aspect-ratio: 1;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            margin-bottom: 5px;
+        }
+
+        .icon-item span { font-size: 0.6em; display: block; font-family: var(--font-canva); line-height: 1.2; }
+
+        .track-btn {
+            background: var(--mnhs-maroon);
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            font-family: var(--font-copperplate);
+            font-size: 0.8em;
+            cursor: pointer;
+        }
+
+        /* Mission Card */
+        .mission-card {
+            border: 1px solid var(--mnhs-maroon);
+            margin: 20px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            background: white;
+        }
+
+        .mission-card h3 {
+            font-family: var(--font-arimo);
+            color: var(--mnhs-maroon);
+            margin-top: 0;
+        }
+
+        .mission-card p {
+            font-family: var(--font-canva);
+            font-size: 0.75em;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--mnhs-maroon);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.7em;
+        }
+
+        .footer blockquote { font-style: italic; margin-bottom: 20px; font-family: var(--font-canva); }
+        .footer p { font-family: var(--font-copperplate); opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <nav class="top-nav">
+    <img src="logo.png" alt="Logo" class="school-logo-small">
+    <div class="search-bar">
+        <span>Search...</span>
+        <span>🔍</span>
+    </div>
+    <div class="nav-icons">🔔 ⚙️</div>
+
+        </nav>
+
+     <div class="hero" style="
+    background: linear-gradient(rgba(128, 0, 0, 0.5), rgba(128, 0, 0, 0.5)), url('images/web1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+">
+    
+    <img src="images/logo.png" alt="MNHS Logo" style="width: 100px; margin-bottom: 15px;">
+    
+    <h1 style="color: white; font-size: 18px;">MARINDUQUE NATIONAL HIGH SCHOOL</h1>
+    <p style="color: rgb(250, 208, 0); font-size: 12px;">ONE HEART, ONE TEAM, ONE MNHS</p>
+    
+    <a href="#" style="background: rgb(255, 255, 255); color: black; padding: 10px 20px; border-radius: 20px; text-decoration: none; margin-top: 15px;">
+        You're one click away →
+    </a>
+
+</div>
+        <main class="actions">
+            <div class="section-title">What would you like to know or do?</div>
+
+          <a href="report.html" class="main-btn">
+  <img src="report1.png" style="width: 50px; height: 50px; object-fit: contain;" alt="Icon">
+    REPORT CONCERN/ COMPLAINT
+
+            </a>
+
+       <div class="icon-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 10px; max-width: 400px; margin: 0 auto;">
+
+    <a href="curriculum.html" style="text-decoration: none; color: black; text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <div style="background-color: #800000; width: 80px; height: 80px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 5px;">
+            <img src="images/curriculum.png" style="width: 50px; height: 50px; object-fit: contain;">
+        </div>
+        <span style="font-size: 11px; line-height: 1.1;">Curriculum Tracks</span>
+    </a>
+</a>
+              <a href="faq.html" style="text-decoration: none; color: black; text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <div style="background-color: #800000; width: 80px; height: 80px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 5px;">
+            <img src="images/faqs.png" style="width: 50px; height: 50px; object-fit: contain;">
+        </div>
+        <span style="font-size: 11px; line-height: 1.1;">FAQs</span>
+</a>
+              <a href="guide.html" style="text-decoration: none; color: black; text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <div style="background-color: #800000; width: 80px; height: 80px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 5px;">
+            <img src="images/students.png" style="width: 50px; height: 50px; object-fit: contain;">
+        </div>
+        <span style="font-size: 11px; line-height: 1.1;">Student Guide</span>
+
+              <a href="alumni.html" style="text-decoration: none; color: black; text-align: center; display: flex; flex-direction: column; align-items: center;">
+        <div style="background-color: #800000; width: 80px; height: 80px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 5px;">
+            <img src="images/alumni.png" style="width: 50px; height: 50px; object-fit: contain;">
+        </div>
+        <span style="font-size: 11px; line-height: 1.1;">Alumni History</span>
+                </a>
+            </div>
+
+            <a href="track.html" style="text-decoration: none; width: 100%;">
+    <button class="track-btn">TRACK CONCERN STATUS</button>
+</a>
+
+            <div class="mission-card">
+                <h3>Your Heart, Our Priority</h3>
+                <p>Every whisper of a worry and every spark of an idea deserves to be heard. We created this "Home Base" so you never have to feel alone in your journey at MNHS. Whether you choose to share your name or remain a silent friend through our anonymous reporting, your truth is safe here.</p>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <blockquote>"Walking with you through every challenge. Marinduque National High School: Where your voice is valued and your future is bright."</blockquote>
+            <p>One Click Away: Empowering Student Voices in the Digital Age. A Project by Grade 12 STEM Students.</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

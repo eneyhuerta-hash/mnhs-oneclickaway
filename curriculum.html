@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNHS | Curriculum Offerings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mnhs-maroon: #800000;
+            --mnhs-gradient: linear-gradient(to bottom, #a00000, #500000);
+            --cream-bg: #FDF9F0;
+            --font-copperplate: "Copperplate", "Copperplate Gothic Light", serif;
+            --font-arimo: 'Arimo', sans-serif;
+        }
+
+        body {
+            background-color: #ccc;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-family: var(--font-arimo);
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: var(--cream-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Watermark Seal */
+        .app-container::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background-image: url('https://via.placeholder.com/300'); /* Replace with your school seal URL */
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.05;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--mnhs-maroon);
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            background: white;
+            border-radius: 20px;
+            padding: 5px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        .nav-icons { color: white; display: flex; gap: 10px; font-size: 1.2em; }
+
+        /* Main Content */
+        main { padding: 20px; flex-grow: 1; z-index: 5; }
+
+        .back-arrow {
+            color: var(--mnhs-maroon);
+            font-size: 1.5em;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .hero-text h1 {
+            font-family: var(--font-copperplate);
+            font-size: 1.2em;
+            margin: 0;
+            line-height: 1.2;
+            color: #000;
+        }
+
+        .hero-text p {
+            font-size: 0.7em;
+            color: #444;
+            margin-top: 5px;
+        }
+
+        /* Gradient Banner */
+        .curriculum-banner {
+            background: var(--mnhs-gradient);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .curriculum-banner h2 {
+            font-family: var(--font-copperplate);
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .curriculum-banner span {
+            font-size: 0.6em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Program Cards */
+        .program-card {
+            background: white;
+            border: 1px solid #dcd0b8;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            margin-bottom: 12px;
+            text-decoration: none;
+            color: #000;
+            transition: transform 0.2s;
+        }
+
+        .program-card:active { transform: scale(0.98); }
+
+        .program-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .program-icon img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .program-name {
+            font-family: var(--font-copperplate);
+            font-size: 0.85em;
+            font-weight: bold;
+            flex-grow: 1;
+        }
+
+        /* Red Footer Bar */
+        .footer-bar {
+            background-color: var(--mnhs-maroon);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.7em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+    <img src="logo.png" alt="MNHS Logo" style="width: 35px; height: 35px; object-fit: contain; padding: 2px;">
+            <div class="search-bar"><span>Search...</span><span>🔍</span></div>
+            <div class="nav-icons">🔔 ⚙️</div>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-arrow">←</a>
+            
+    <div style="display: flex; align-items: flex-start; justify-content: space-between; padding: 20px; width: 100%; box-sizing: border-box;">
+    
+    <div style="flex: 1; padding-top: 10px;">
+        <h2 style="font-family: 'Arial Black', sans-serif; font-size: 1.3rem; margin: 0; line-height: 1.1; color: #000; text-transform: uppercase;">
+            Start Your Journey <br> With Excellence
+        </h2>
+        <p style="font-size: 12px; color: #555; margin-top: 10px; line-height: 1.4; max-width: 180px;">
+            Explore the specialized programs designed to help you discover your talents from Grade 7 to Grade 10.
+        </p>
+    </div>
+
+    <div style="flex-shrink: 0; margin-left: 10px;">
+        <img src="excellence.png" alt="Excellence" 
+             style="width: 200px; height: auto; object-fit: contain; display: block;">
+    </div>
+
+</div>
+            <div class="curriculum-banner">
+                <h2>CURRICULUM OFFERINGS</h2>
+                <span>Grade 7 - Grade 10</span>
+            </div>
+
+   <div style="width: 100%; margin-bottom: 15px;">
+    <a href="tvl-offerings.html" style="text-decoration: none; color: inherit; display: block; width: 100%;">
+        <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+            <img src="regular.png" alt="Regular Class" style="width: 60px; height: 60px; object-fit: contain; margin-right: 15px;">
+            
+            <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase; color: #000;">
+                Regular Class
+            </span>
+        </div>
+    </a>
+
+    <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <img src="ssc.png" alt="SSC" style="width: 60px; height: 60px; object-fit: contain; margin-right: 15px;">
+        <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase;">Special Science Class (SSC)</span>
+    </div>
+
+    <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <img src="spa.png" alt="SPA" style="width: 60px; height: 60px; object-fit: contain; margin-right: 15px;">
+        <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase;">Special Program in Arts (SPA)</span>
+    </div>
+
+    <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+        <img src="sps.png" alt="SPS" style="width: 60px; height: 60px; object-fit: contain; margin-right: 15px;">
+        <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase;">Special Program in Sports (SPS)</span>
+    </div>
+
+    <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box;">
+        <img src="spfl.png" alt="SPFL" style="width: 60px; height: 60px; object-fit: contain; margin-right: 15px;">
+        <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase; color: #000;"> Special Program in Foreign Language (SPFL)</span>
+        </span>
+    </div>
+
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 40px 20px; width: 100%; box-sizing: border-box; background-color: #fdf8f0;">
+    
+    <div style="flex: 1; padding-right: 20px;">
+        <h1 style="margin: 0; font-family: 'Arial Black', Gadget, sans-serif; font-size: 22px; line-height: 1.1; color: #000; text-transform: uppercase;">
+            CHARTING YOUR<br>COURSE
+        </h1>
+        <p style="margin: 20px 0 0; font-family: 'Arial', sans-serif; font-size: 12px; line-height: 1.5; color: #444; max-width: 400px;">
+            Choose the Senior High School path that leads to your dreams. At MNHS, we empower you to envision your future.
+        </p>
+    </div>
+
+    <div style="flex-shrink: 0;">
+        <img src="charting.png" alt="Compass" style="width: 180px; height: auto; object-fit: contain;">
+    </div>
+
+</div>
+
+    <div style="background: linear-gradient(to bottom, #800000, #4a0000); color: white; padding: 15px; text-align: center; border-radius: 8px; margin: 20px 0; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%; box-sizing: border-box;">
+    <h3 style="margin: 0; font-size: 18px; text-transform: uppercase; letter-spacing: 1px;">Curriculum Offerings</h3>
+    <p style="margin: 5px 0 0; font-size: 10px; opacity: 0.9;">GRADE 11 - GRADE 12</p>
+</div>
+
+<div style="background: linear-gradient(to bottom, #800000, #4a0000); color: white; padding: 12px; text-align: center; border-radius: 8px; margin-bottom: 15px; width: 100%; box-sizing: border-box;">
+    <h4 style="margin: 0; font-size: 16px; text-transform: uppercase;">Academic Tracks</h4>
+</div>
+
+<div style="background: white; border: 1px solid #d32f2f; border-radius: 15px; padding: 20px; margin-bottom: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box;">
+    <h5 style="text-align: center; margin-top: 0; font-size: 16px; color: #000; text-transform: uppercase;">Electives</h5>
+    <ol style="font-size: 13px; line-height: 1.6; color: #333; padding-left: 20px; margin-bottom: 0;">
+        <li>Basic Accounting</li>
+        <li>Introduction to Organization & Management</li>
+        <li>Business Finance & Taxation (Business 2)</li>
+        <li>Business Economics (Business 3)</li>
+        <li>Finite Mathematics 1</li>
+        <li>Finite Mathematics 2</li>
+        <li>Physics 1</li>
+        <li>Physics 2</li>
+        <li>Chemistry 1</li>
+        <li>Chemistry 2</li>
+        <li>Biology 1</li>
+        <li>Biology 2</li>
+        <li>Philippine Governance</li>
+        <li>Social Science (Theory & Practice)</li>
+        <li>Citizenship & Civic Engagement</li>
+        <li>Introduction to Philosophy</li>
+        <li>Malikhaing Pagsulat</li>
+        <li>Creative Industries 1</li>
+        <li>Creative Industries 2</li>
+        <li>Filipino 1</li>
+        <li>Creative Composition 1</li>
+        <li>Human Movement 1</li>
+        <li>Human Movement 2</li>
+    </ol>
+</div>
+
+<div style="background: linear-gradient(to bottom, #800000, #4a0000); color: white; padding: 12px; text-align: center; border-radius: 8px; margin-bottom: 15px; width: 100%; box-sizing: border-box;">
+    <h4 style="margin: 0; font-size: 16px; text-transform: uppercase;">Tech-Voc Tracks</h4>
+</div>
+
+<div style="background: white; border: 1px solid #d32f2f; border-radius: 15px; padding: 20px; margin-bottom: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box;">
+    <h5 style="text-align: center; margin-top: 0; font-size: 16px; color: #000; text-transform: uppercase;">Electives</h5>
+    <ol style="font-size: 13px; line-height: 1.8; color: #333; padding-left: 20px; margin-bottom: 0;">
+        <li>Technical Drafting</li>
+        <li>Manual Metal Arc Welding</li>
+        <li>Computer System Servicing</li>
+        <li>Kitchen Operations</li>
+        <li>Bakery Operations</li>
+        <li>Electrical Installation and Maintenance</li>
+        <li>Tourism Services</li>
+    </ol>
+
+</div>
+        <footer class="footer-bar">
+            <span>🔒</span>
+            <div>Encrypted & Confidential. Built by STEM students for the MNHS family.</div>
+        </footer>
+    </div>
+
+</body>
+</html>

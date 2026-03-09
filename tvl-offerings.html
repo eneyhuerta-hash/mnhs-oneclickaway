@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNHS | TVL Programs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mnhs-maroon: #800000;
+            --cream-bg: #FDF9F0;
+            --font-copperplate: "Copperplate", "Copperplate Gothic Light", serif;
+            --font-arimo: 'Arimo', sans-serif;
+        }
+
+        body {
+            background-color: #ccc;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            font-family: var(--font-arimo);
+        }
+
+        .app-container {
+            width: 100%;
+            max-width: 414px;
+            background-color: var(--cream-bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 20px rgba(0,0,0,0.2);
+            position: relative;
+        }
+
+        /* School Seal Watermark */
+        .app-container::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background-image: url('https://via.placeholder.com/300'); /* Use MNHS Seal */
+            background-repeat: no-repeat;
+            background-size: contain;
+            opacity: 0.05;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* Nav Header */
+        header {
+            background-color: var(--mnhs-maroon);
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            background: white;
+            border-radius: 20px;
+            padding: 5px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8em;
+            color: #888;
+        }
+
+        /* Content Area */
+        main { padding: 20px; flex-grow: 1; z-index: 5; text-align: center; }
+
+        .back-arrow {
+            color: var(--mnhs-maroon);
+            font-size: 1.5em;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .curriculum-banner {
+            background: linear-gradient(to bottom, #a00000, #500000);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 10px 0 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .curriculum-banner h2 {
+            font-family: var(--font-copperplate);
+            font-size: 1.1em;
+            margin: 0;
+        }
+
+        .curriculum-banner span {
+            font-size: 0.7em;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .instruction-text {
+            font-size: 0.75em;
+            color: #444;
+            line-height: 1.4;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        /* Program Row Styling */
+        .program-row {
+            background: white;
+            border: 1px solid #dcd0b8;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #000;
+            min-height: 80px;
+        }
+
+        .program-label {
+            flex: 1;
+            font-family: var(--font-copperplate);
+            font-size: 0.85em;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .program-icon { width: 60px; height: 60px; object-fit: contain; }
+        .icon-left { margin-right: 15px; }
+        .icon-right { margin-left: 15px; }
+
+        /* Footer */
+        .footer-bar {
+            background-color: var(--mnhs-maroon);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.7em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+    <img src="logo.png" alt="MNHS Logo" style="width: 35px; height: 35px; object-fit: contain; padding: 2px;">
+            <div class="search-bar"><span>Search...</span><span>🔍</span></div>
+            <div class="nav-icons">🔔 ⚙️</div>
+        </header>
+
+
+        <main>
+            <a href="curriculum.html" class="back-arrow">←</a>
+            
+            <div class="curriculum-banner">
+                <h2>CURRICULUM OFFERINGS</h2>
+                <span>FOR INCOMING GRADE 9 STUDENTS</span>
+            </div>
+
+            <p class="instruction-text">
+                Students who came from regular class, they may choose from the following Technical-Vocational-Livelihood (TVL) programs:
+            </p>
+
+           <div style="display: flex; flex-direction: column; gap: 15px; padding: 20px; width: 100%; box-sizing: border-box;">
+
+    <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box;">
+        <img src="css.png" alt="CSS" style="width: 70px; height: 70px; object-fit: contain; margin-right: 15px;">
+        <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase; color: #000;">
+            Computer Systems Servicing (CSS)
+        </span>
+    </div>
+
+    <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box;">
+        <img src="cp.png" alt="Programming" style="width: 60px; height: 60px; object-fit: contain; margin-right: 15px;">
+        <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase; color: #000;">
+            Computer Programming
+        </span>
+    </div>
+
+    <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box;">
+        <img src="cookery.png" alt="Cookery" style="width: 70px; height: 70px; object-fit: contain; margin-right: 15px;">
+        <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase; color: #000;">
+            Cookery
+        </span>
+    </div>
+
+    <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box;">
+        <img src="td.png" alt="Drafting" style="width: 70px; height: 70px; object-fit: contain; margin-right: 15px;">
+        <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase; color: #000;">
+            Technical Drafting
+        </span>
+    </div>
+
+    <div style="display: flex; align-items: center; background: white; border: 1px solid #ddd; border-radius: 12px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); width: 100%; box-sizing: border-box;">
+        <img src="eim.png" alt="EIM" style="width: 70px; height: 70px; object-fit: contain; margin-right: 15px;">
+        <span style="font-family: 'Arial Black', sans-serif; font-size: 14px; text-transform: uppercase; color: #000;">
+            Electrical Installation and Maintenance (EIM)
+        </span>
+    </div>
+
+        <footer class="footer-bar">
+            <span>🔒</span>
+            <div>Encrypted & Confidential. Built by STEM students for the MNHS family.</div>
+        </footer>
+    </div>
+
+</body>
+</html>

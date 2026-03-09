@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MNHS | Student's Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --mnhs-maroon: #800000;
+            --cream-bg: #FDF9F0;
+            --font-copperplate: "Copperplate", "Copperplate Gothic Light", serif;
+            --font-arimo: 'Arimo', sans-serif;
+        }
+
+        body { background-color: #ccc; margin: 0; display: flex; justify-content: center; font-family: var(--font-arimo); }
+
+        .app-container {
+            width: 100%; max-width: 414px; background-color: var(--cream-bg);
+            min-height: 100vh; display: flex; flex-direction: column; box-shadow: 0 0 20px rgba(0,0,0,0.2);
+        }
+
+        header { background-color: var(--mnhs-maroon); padding: 15px; display: flex; align-items: center; gap: 10px; position: sticky; top: 0; z-index: 100; }
+        .search-bar { flex-grow: 1; background: white; border-radius: 20px; padding: 5px 15px; display: flex; justify-content: space-between; font-size: 0.8em; color: #888; }
+
+        main { padding: 20px; flex-grow: 1; overflow-y: auto; }
+        .back-link { color: var(--mnhs-maroon); text-decoration: none; font-size: 1.2em; display: block; margin-bottom: 20px; }
+
+        h1 { font-family: var(--font-copperplate); color: var(--mnhs-maroon); font-size: 1.3em; text-align: center; margin-bottom: 20px; }
+
+        /* Menu Buttons */
+        .guide-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 25px; }
+        .menu-btn { 
+            background: white; border: 1px solid var(--mnhs-maroon); color: var(--mnhs-maroon);
+            padding: 12px 5px; border-radius: 8px; font-size: 0.75em; font-family: var(--font-copperplate);
+            cursor: pointer; font-weight: bold; transition: 0.3s;
+        }
+        .menu-btn.active { background: var(--mnhs-maroon); color: white; }
+
+        /* Content Sections */
+        .content-section { display: none; animation: fadeIn 0.4s; }
+        .content-section.active { display: block; }
+
+        .info-card { background: white; border: 1px solid #dcd0b8; border-radius: 12px; padding: 15px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .section-h { color: var(--mnhs-maroon); font-family: var(--font-copperplate); font-size: 1em; margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        table { width: 100%; border-collapse: collapse; font-size: 0.85em; margin: 10px 0; }
+        th, td { border: 1px solid #dcd0b8; padding: 8px; text-align: left; }
+        th { background: #f9f9f9; }
+
+        ul { padding-left: 20px; margin: 0; font-size: 0.85em; line-height: 1.6; }
+        p { font-size: 0.85em; line-height: 1.6; color: #333; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .footer-bar { background-color: var(--mnhs-maroon); color: white; padding: 15px; text-align: center; font-size: 0.7em; }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <img src="logo.png" alt="MNHS Logo" style="width: 35px; height: 35px; object-fit: contain; padding: 2px;">
+            <div class="search-bar"><span>Search Guide...</span><span>🔍</span></div>
+        </header>
+
+        <main>
+            <a href="index.html" class="back-link">← Back</a>
+            <h1>STUDENT'S GUIDE</h1>
+
+            <div class="guide-menu">
+                <button class="menu-btn active" onclick="showSection('rules', this)">SCHOOL RULES</button>
+                <button class="menu-btn" onclick="showSection('prohibited', this)">PROHIBITED ACTS</button>
+                <button class="menu-btn" onclick="showSection('discipline', this)">DISCIPLINARY ACTIONS</button>
+                <button class="menu-btn" onclick="showSection('legal', this)">LEGAL PROTECTION</button>
+            </div>
+
+            <div id="rules" class="content-section active">
+                <div class="info-card">
+                    <div class="section-h">Punctuality & Attendance</div>
+                    <p>Arrive at school at the designated time. Attend the Monday morning Flag Raising Ceremony.</p>
+                </div>
+                <div class="info-card">
+                    <div class="section-h">Uniform & Identification</div>
+                    <p>Enter the school premises wearing the proper uniform and I.D.</p>
+                    <table>
+                        <tr><th>Category</th><th>Male</th><th>Female</th></tr>
+                        <tr><td>JHS</td><td>Khaki Pants, White T-shirt or Polo</td><td>White T-shirt or Blouse, Maroon Pleated Skirt</td></tr>
+                        <tr><td>SHS</td><td>Black Pants, White T-shirt or Polo</td><td>White Blouse, Maroon A-Line Skirt</td></tr>
+                    </table>
+                </div>
+                <div class="info-card">
+                    <div class="section-h">Grooming</div>
+                    <p>Maintain a neat haircut and natural hair color. Fancy hairstyles, excessive hair products (stiff hair), or dyed hair are not permitted.</p>
+                </div>
+                <div class="info-card">
+                    <div class="section-h">Class Attendance</div>
+                    <p>Attend all subjects daily. In case of absence, parents must provide a written excuse letter to the adviser stating the reason.</p>
+                </div>
+                <div class="info-card">
+                    <div class="section-h">Academic Effort</div>
+                    <p>Complete and submit projects for every subject on time to ensure prompt grading. Study diligently to pass every subject.</p>
+                </div>
+                <div class="info-card">
+                    <div class="section-h">Conduct</div>
+                    <p>Respect all teachers, fellow students, and school staff or authorities.</p>
+                </div>
+            </div>
+
+            <div id="prohibited" class="content-section">
+                <div class="info-card">
+                    <div class="section-h">MINOR OFFENSES</div>
+                    <ul>
+                        <li>Cutting classes.</li>
+                        <li>Using another student’s I.D. or lending your I.D. to others.</li>
+                        <li>Jumping over the fence or leaving school grounds outside of designated hours.</li>
+                        <li>Cheating or providing answers to classmates during examinations.</li>
+                        <li>Wearing excessive makeup or having tattoos/markings on any part of the body.</li>
+                        <li>Wearing accessories not suited for the school uniform (e.g., hats, earrings for males, heavy chains, etc.).</li>
+                        <li>Bringing or entertaining outside guests inside the school (except parents).</li>
+                        <li>Littering inside or outside the school; loitering or making noise in hallways while classes are in session.</li>
+                        <li>Selling items inside the classroom unless it is part of a school subject.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <div class="section-h">MAJOR OFFENSES</div>
+                    <ul>
+                        <li>Public Display of Affection (PDA).</li>
+                        <li>Taking or damaging property that does not belong to you.</li>
+                        <li>Vandalizing school property (tables, chairs, walls, etc.).</li>
+                        <li>Writing on walls, tables, chairs, or any part of the school premises.</li>
+                        <li>Smoking, bringing alcoholic beverages, or entering the campus/class under the influence of alcohol.</li>
+                        <li>Forging or falsifying signatures and tampering with any official school records.</li>
+                        <li>Shouting at or harming fellow students/staff, and blatant defiance of authority.</li>
+                        <li>Profanity and use of obscene or defamatory language.</li>
+                        <li>Extortion or forcibly asking for money or items.</li>
+                        <li>Unauthorized use of cellphones, laptops, and other gadgets during class hours.</li>
+                        <li>Watching obscene/pornographic materials.</li>
+                        <li>Taking photos or recording conversations/actions of students or staff without consent.</li>
+                        <li>Uploading or spreading videos/pictures that damage the reputation of teachers, students, or staff.</li>
+                        <li>Forming or joining unauthorized organizations (Fraternities/Sororities/Gangs) per DepEd Order No. 20, s. 1991.</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <div class="section-h">GRAVE OFFENSES</div>
+                    <ul>
+                        <li>Bringing or smuggling any deadly weapons.</li>
+                        <li>Use, possession, or sale of prohibited drugs.</li>
+                        <li>Hazing inside or outside the school.</li>
+                        <li>Bullying that results in physical injury or psychological disturbance.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="discipline" class="content-section">
+                <div class="info-card">
+                    <div class="section-h">METHODS</div>
+                    <p>a. Agreement/Contract <br>b. Suspension <br>c. Transfer <br>d. Dismissal/Expulsion <br>e. Referral</p>
+                </div>
+                <div class="info-card">
+                    <div class="section-h">STAGES</div>
+                    <p><strong>FIRST OFFENSE:</strong> Student is called for a meeting with the Class Adviser for a warning.</p>
+                    <p><strong>SECOND OFFENSE:</strong> Parents are summoned to discuss the violation and apply the necessary discipline and written agreement.</p>
+                    <p><strong>THIRD OFFENSE:</strong> Parents are summoned to be informed of the final decision (sanction) by the School Principal.</p>
+                </div>
+            </div>
+
+            <div id="legal" class="content-section">
+                <div class="info-card">
+                    <div class="section-h">MANDATES & LAWS</div>
+                    <p>Disciplinary action for violations of Philippine Laws will follow due process based on:</p>
+                    <ul>
+                        <li>R.A. 11053: Anti-Hazing Law</li>
+                        <li>R.A. 10627: Anti-Bullying Act of 2013</li>
+                        <li>R.A. 10175: Cybercrime Prevention Act of 2000</li>
+                        <li>R.A. 11313: Safe Spaces Act (Bawal Bastos Law)</li>
+                        <li>R.A. 9165: Comprehensive Dangerous Drugs Act of 2002</li>
+                        <li>R.A. 9514: Fire Code of the Philippines of 2008</li>
+                        <li>R.A. 8353: Anti-Rape Law of 1997</li>
+                        <li>R.A. 7610: Special Protection of Children Act</li>
+                        <li>R.A. 9344: Juvenile Justice and Welfare System Act</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer-bar">
+            Encrypted & Confidential. Built by STEM students for the MNHS family.
+        </footer>
+    </div>
+
+    <script>
+        function showSection(sectionId, btn) {
+            // Hide all sections
+            document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+            // Show selected section
+            document.getElementById(sectionId).classList.add('active');
+            // Update button styles
+            document.querySelectorAll('.menu-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            // Scroll to top of content
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
